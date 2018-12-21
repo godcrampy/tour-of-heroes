@@ -10,11 +10,11 @@ import { Hero } from '../hero.model';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
-  selectedHero : Hero
+  // selectedHero : Hero
 
-  onSelect(hero : Hero){
-    this.selectedHero = hero;
-  }
+  // onSelect(hero : Hero){
+  //   this.selectedHero = hero;
+  // }
   getHeroes(): void {
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes)
   }

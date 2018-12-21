@@ -1,5 +1,7 @@
 <div class=" list-group" >
-  <a [ngClass]="{'active': hero === selectedHero}" href="#" class=" list-group-item list-group-item-action" (click)="onSelect(hero)" *ngFor="let hero of heroes">Hero Name: {{hero.name}} Id: {{hero.id}}</a>
+  <a [ngClass]="{'active': hero === selectedHero}"
+  class=" list-group-item list-group-item-action"
+  routerLink = "/detail/{{hero.id}}"
+  *ngFor="let hero of heroes">Hero Name: {{hero.name}} Id: {{hero.id}}</a>
 </div>
 
-<app-hero-detail [hero] = "selectedHero"></app-hero-detail>
